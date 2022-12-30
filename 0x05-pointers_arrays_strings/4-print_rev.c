@@ -1,20 +1,24 @@
 #include"main.h"
 
 /**
- * puts2 - prints every character of a string
+ * print_rev - prints a string in reverse
  *
- * @str: string parameter input
+ * @s: string parameter input
  *
  * Return: Noting
  */
-void puts2(char *str)
-{
-	int i;
 
-	for (i = 0; str[i] != '\0'; ++i)
-	{
-		if (i % 2 == 0)
-			_putchar(str[i]);
-	}
+void print_rev(char *s)
+{
+	int index;
+
+	/*finds the length of string without null character*/
+	for (index = 0; s[index] != '\0'; ++index)
+		;
+
+	/*print char from the last index as you decrement*/
+	for (--index; index >= 0; --index)
+		_putchar(s[index]);
 	_putchar('\n');
 }
+
